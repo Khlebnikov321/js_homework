@@ -1,0 +1,21 @@
+Робота з обьектом
+
+
+const obj = {
+    model: 'iPhone 12 Pro Max',
+    storage: '512 GB',
+    color: 'Space Gray',
+    getInfo: function() {
+      for (let key in this) {
+        if (typeof this[key] !== 'function') {
+          console.log(key + ': ' + this[key]);
+        }
+      }
+    }
+  };
+  
+  obj.getInfo();
+  
+  obj.newProperty = 'Refurbished!';
+  
+  obj.getInfo();
